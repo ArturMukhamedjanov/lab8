@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Group fx:id="root" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="layoutsControllers.ShowElementsLayoutController">
+<VBox prefHeight="480.0" prefWidth="1408.0" xmlns="http://javafx.com/javafx/17.0.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar fx:id="aboutUserInfoMenu" prefHeight="26.0" prefWidth="1028.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu fx:id="Edit" mnemonicParsing="false" text="Edit">
+          <items>
+                  <MenuItem fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonClicked" text="Clear" />
+                  <MenuItem fx:id="countLessThanNumberOfRoomsButton" mnemonicParsing="false" onAction="#countLessThanNumberOfRoomsButtonClicked" text="Count less than number of rooms" />
+                  <MenuItem fx:id="historyButton" mnemonicParsing="false" onAction="#historyButtonClicked" text="History" />
+                  <MenuItem fx:id="addElementButton" mnemonicParsing="false" onAction="#addElementButtonClicked" text="Add element" />
+                  <MenuItem fx:id="showMinimalByCoordinatesButton" mnemonicParsing="false" onAction="#showMinimalByCoordinatesButtonClicked" text="Show minimal by coordinates" />
+                  <MenuItem fx:id="removeAllByNumberOfRoomsButton" mnemonicParsing="false" onAction="#removeAllByNumberOfRoomsButtonClicked" text="Remove all by number of rooms" />
+                  <MenuItem fx:id="removeElementButton" mnemonicParsing="false" onAction="#removeElementButtonClicked" text="Remove element" />
+                  <MenuItem fx:id="removeLowerKeyElementButton" mnemonicParsing="false" onAction="#removeLowerKeyElementsButtonClicked" text="Remove lower key element" />
+                  <MenuItem fx:id="updateElementButton" mnemonicParsing="false" onAction="#updateElementButtonClicked" text="Update element" />
+                  <MenuItem fx:id="executeScriptButton" mnemonicParsing="false" onAction="#executeScriptButtonClicked" text="Execute script" />
+          </items>
+        </Menu>
+        <Menu fx:id="helpMenu" mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem fx:id="aboutCollectionMenu" mnemonicParsing="false" onAction="#aboutCollectionButtonClicked" text="About Collection" />
+          </items>
+        </Menu>
+          <Menu mnemonicParsing="false" text="SelectLanguage">
+              <items>
+                  <MenuItem fx:id="SelecLanguageButton" mnemonicParsing="false" onAction="#setRussianLocalisation" text="Русский" />
+                  <MenuItem fx:id="SelecLanguageButton1" mnemonicParsing="false" onAction="#setUkrainLocalisation" text="Український" />
+                  <MenuItem fx:id="SelecLanguageButton2" mnemonicParsing="false" onAction="#setSpainLocalisation" text="Español" />
+                  <MenuItem fx:id="SelecLanguageButton3" mnemonicParsing="false" onAction="#setNetherlandsLocalisation" text="Nederlands" />
+              </items>
+          </Menu>
+               <Menu fx:id="aboutUserMenu" mnemonicParsing="false" text="AboutUserInfoMenu">
+                 <items>
+                   <MenuItem fx:id="usersLoginInfo" mnemonicParsing="false" onAction="#showUsersLogin" text="UsersLogin" />
+                     <MenuItem fx:id="usersElementsInfo" mnemonicParsing="false" onAction="#showUsersElements" text="UsersElements" />
+                 </items>
+               </Menu>
+               <Menu fx:id= "filterMenu" mnemonicParsing="false" text="FilterMeun">
+                 <items>
+                   <MenuItem fx:id= "addFilterMenu" mnemonicParsing="false" text="addFilter" onAction="#addFilterButtonClicked"/>
+                     <MenuItem fx:id="removeFilterMenu" mnemonicParsing="false" text="removeFilter" onAction="#removeFilterById"/>
+                     <MenuItem fx:id="removeAllFiltersMenu" mnemonicParsing="false" text="removeAllFilters" onAction="#clearFilters"/>
+                     <MenuItem fx:id="showFiltersMenu" mnemonicParsing="false" text="showFilters" onAction="#showFilters"/>
+                 </items>
+               </Menu>
+          <Menu fx:id="exitMenu" mnemonicParsing="false" text="AboutUserInfoMenu">
+              <items>
+                  <MenuItem fx:id="exitFromApp" mnemonicParsing="false" onAction="#Exit" text="UsersLogin" />
+                  <MenuItem fx:id="exitFromAccount" mnemonicParsing="false" onAction="#ExitFromAccount" text="UsersElements" />
+              </items>
+          </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="anchorPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="454.0" prefWidth="1079.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TableView fx:id="tableView" prefHeight="454.0" prefWidth="1028.0">
+              <columns>
+                  <TableColumn fx:id="keyColumn" prefWidth="36.79998856782913" text="key" />
+                <TableColumn fx:id="idColumn" prefWidth="36.79998856782913" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="68.79998397827148" text="name" />
+                  <TableColumn fx:id="coordinateXColumn" prefWidth="82.39993286132812" text="coordinate x" />
+                  <TableColumn fx:id="coordinateYColumn" prefWidth="78.40007019042969" text="coordinate y" />
+                  <TableColumn fx:id="creationDateColumn" prefWidth="84.800048828125" text="creation date" />
+                  <TableColumn fx:id="areaColumn" prefWidth="46.39996337890625" text="area" />
+                  <TableColumn fx:id="numberOfRoomsColumn" prefWidth="105.5999755859375" text="number of rooms" />
+                  <TableColumn fx:id="furnitureColumn" prefWidth="66.39996337890625" text="furniture" />
+                  <TableColumn fx:id="furnishColumn" prefWidth="75.19989013671875" text="furnish" />
+                  <TableColumn fx:id="viewColumn" prefWidth="76.7999267578125" text="view" />
+                  <TableColumn fx:id="nameOfHouseColumn" prefWidth="98.39996337890625" text="name of house" />
+                  <TableColumn fx:id="yearColumn" prefWidth="51.199951171875" text="year" />
+                  <TableColumn fx:id="numberOfFlatsColumn" prefWidth="125.0" text="number of flats" />
+                  <TableColumn fx:id="isYourElementColumn" prefWidth="50" text="year" />
+              </columns>
+            </TableView>
+               <ImageView fx:id="imageView" fitHeight="450.0" fitWidth="380.0" layoutX="1028.0" pickOnBounds="true" preserveRatio="true" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
+</Group>

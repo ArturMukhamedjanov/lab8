@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Group?>
+<Group fx:id="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.0.1"  fx:controller="layoutsControllers.RegistrationAndEnterLayoutController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.0.1"  xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+        <menus>
+        <Menu mnemonicParsing="false" text="SelectLanguage">
+            <items>
+                <MenuItem fx:id="SelecLanguageButton" mnemonicParsing="false" text="Русский" onAction="#setRussianLocalisation"/>
+                <MenuItem fx:id="SelecLanguageButton1" mnemonicParsing="false" text="Український" onAction="#setUkrainLocalisation"/>
+                <MenuItem fx:id="SelecLanguageButton2" mnemonicParsing="false" text="Español" onAction="#setSpainLocalisation"/>
+                <MenuItem fx:id="SelecLanguageButton3" mnemonicParsing="false" text="Nederlands" onAction="#setNetherlandsLocalisation"/>
+            </items>
+        </Menu>
+    </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TextField fx:id="EnterLogin" layoutX="229.0" layoutY="104.0" />
+            <Label fx:id="LoginText" layoutX="229.0" layoutY="86.0" text="Введите логин" />
+            <Label fx:id="PasswordText" layoutX="230.0" layoutY="130.0" text="Введите пароль" />
+            <PasswordField fx:id="EnterPassword" layoutX="230.0" layoutY="148.0" />
+            <Button fx:id="SubmitEntering" layoutX="245.0" layoutY="187.0" mnemonicParsing="false" onAction="#enterLoginAndPassword" text="Подтвердить ввод" />
+            <Button fx:id="Registrate" layoutX="241.0" layoutY="223.0" mnemonicParsing="false" onAction="#changeToRegistration" text="Зарегистрироваться" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
+</Group>
